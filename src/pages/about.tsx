@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { Layout } from "src/components/Layout";
 const Home: NextPage = () => {
 	return (
-		<Layout title="Home">
+		<Layout title="About">
 			<div className=""></div>;
 		</Layout>
 	);

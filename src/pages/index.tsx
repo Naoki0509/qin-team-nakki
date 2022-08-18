@@ -1,21 +1,28 @@
+import { Box, Container } from "@mantine/core";
 import type { NextPage } from "next";
-import Head from "next/head";
-import { Blog } from "src/components/Blog/Blog";
-import { Github } from "src/components/Github";
+import { Blog } from "src/components/Home-components/Blog";
+import { Github } from "src/components/Home-components/Github";
+import { Twitter } from "src/components/Home-components/Twitter";
+
 import { Layout } from "src/components/Layout";
-import { Portpolio } from "src/components/portpolio";
-import { Twitter } from "src/components/Twitter";
+import { Portpolio } from "src/components/Home-components/portpolio";
+
+import { useMediaQuery } from "src/lib/mantine";
+
 const Home: NextPage = () => {
+	const response = useMediaQuery("sm");
 	return (
 		<Layout title="Home">
-			<div className="">
+			<Container size="md">
 				<Blog />
 				<Portpolio />
-			</div>
-			<div className="flex flex-row">
-				<Github />
-				<Twitter />
-			</div>
+				<Box
+					className={response ? "flex justify-between space-x-10" : undefined}
+				>
+					<Github />
+					<Twitter />
+				</Box>
+			</Container>
 		</Layout>
 	);
 };

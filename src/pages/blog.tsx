@@ -1,10 +1,13 @@
+import { Container } from "@mantine/core";
 import type { NextPage } from "next";
-import Head from "next/head";
+import { Blog } from "src/components/Home-components/Blog";
 import { Layout } from "src/components/Layout";
 const Home: NextPage = () => {
 	return (
-		<Layout title="Home">
-			<div className=""></div>;
+		<Layout title="Blog">
+			<Container size="md">
+				<Blog isShowAll />
+			</Container>
 		</Layout>
 	);
 };
