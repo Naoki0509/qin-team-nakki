@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "src/lib/tailwind.css";
 import type { AppProps } from "next/app";
 import { GetServerSidePropsContext } from "next";
 import { useState } from "react";
