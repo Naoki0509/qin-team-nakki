@@ -2,11 +2,9 @@ import { Box, Container } from "@mantine/core";
 import type { NextPage } from "next";
 import { Blog } from "src/components/Home-components/Blog";
 import { Github } from "src/components/Home-components/Github";
+import { Portfolio } from "src/components/Home-components/portfolio";
 import { Twitter } from "src/components/Home-components/Twitter";
-
 import { Layout } from "src/components/Layout";
-import { Portpolio } from "src/components/Home-components/portpolio";
-
 import { useMediaQuery } from "src/lib/mantine";
 
 const Home: NextPage = () => {
@@ -15,7 +13,7 @@ const Home: NextPage = () => {
 		<Layout title="Home">
 			<Container size="md">
 				<Blog />
-				<Portpolio />
+				<Portfolio />
 				<Box
 					className={response ? "flex justify-between space-x-10" : undefined}
 				>

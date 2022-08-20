@@ -33,7 +33,7 @@ export const MobileNav: FC = () => {
 						Blog
 					</Anchor>
 					<Anchor href="/portfolio" className="text-white" weight={700}>
-						Blog
+						Portfolio
 					</Anchor>
 					<Anchor href="/contact" className="text-white" weight={700}>
 						Contact

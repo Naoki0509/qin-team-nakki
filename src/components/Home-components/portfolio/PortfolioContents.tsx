@@ -1,8 +1,8 @@
 import { Card, Group, Image, Text, Title } from "@mantine/core";
 import { FC } from "react";
-import { PortpolioProps } from "src/components/types/PortPolio";
+import { PortfolioProps } from "src/components/types/Portfolio";
 
-export const PortpolioContents: FC<PortpolioProps> = (props) => {
+export const PortfolioContents: FC<PortfolioProps> = (props) => {
 	return (
 		<div className="mb-6">
 			<Card>
