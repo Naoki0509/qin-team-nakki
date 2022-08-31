@@ -1,4 +1,5 @@
-import { Anchor, Burger, Drawer, useMantineTheme } from "@mantine/core";
+import { Anchor, Burger, Drawer, Group, useMantineTheme } from "@mantine/core";
+import Link from "next/link";
 import { FC, useState } from "react";
 
 export const MobileNav: FC = () => {
@@ -25,20 +26,28 @@ export const MobileNav: FC = () => {
 						: theme.colors.gray[2]
 				}
 			>
-				<div className="m-3 flex flex-col text-3xl">
-					<Anchor href="/about" className="text-white" weight={700}>
-						About
-					</Anchor>
-					<Anchor href="/blog" className="text-white" weight={700}>
-						Blog
-					</Anchor>
-					<Anchor href="/portfolio" className="text-white" weight={700}>
-						Portfolio
-					</Anchor>
-					<Anchor href="/contact" className="text-white" weight={700}>
-						Contact
-					</Anchor>
-				</div>
+				<Group className="m-3 flex flex-col text-3xl">
+					<Link href="/about">
+						<Anchor className="text-white" weight={700}>
+							About
+						</Anchor>
+					</Link>
+					<Link href="/blog">
+						<Anchor className="text-white" weight={700}>
+							Blog
+						</Anchor>
+					</Link>
+					<Link href="/portfolio">
+						<Anchor className="text-white" weight={700}>
+							Portfolio
+						</Anchor>
+					</Link>
+					<Link href="/contact">
+						<Anchor className="text-white" weight={700}>
+							Contact
+						</Anchor>
+					</Link>
+				</Group>
 			</Drawer>
 		</div>
 	);
