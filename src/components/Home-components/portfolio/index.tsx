@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { FC, useCallback } from "react";
 import { ContentLayout } from "src/components/Home-components/ContentLayout";
 import { PortfolioContents } from "src/components/Home-components/portfolio/PortfolioContents";
-import { PortfolioProps } from "src/components/types/Portfolio";
+import { PortfolioProps } from "src/types";
 
 const PortfolioItem: Array<PortfolioProps> = [
 	{

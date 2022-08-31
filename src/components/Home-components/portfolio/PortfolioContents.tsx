@@ -1,6 +1,6 @@
 import { Card, Group, Image, Text, Title } from "@mantine/core";
 import { FC } from "react";
-import { PortfolioProps } from "src/components/types/Portfolio";
+import { PortfolioProps } from "src/types";
 
 export const PortfolioContents: FC<PortfolioProps> = (props) => {
 	return (
