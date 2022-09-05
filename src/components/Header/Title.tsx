@@ -10,7 +10,7 @@ export const MainTitle: FC = () => {
 			<Link href="/">
 				<Anchor color={dark ? "dimmed" : "dark"}>
 					<Text weight={500} sx={{ marginLeft: "3rem" }}>
-						Shimabu IT Unibacity
+						Naoki site
 					</Text>
 				</Anchor>
 			</Link>
