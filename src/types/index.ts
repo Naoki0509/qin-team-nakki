@@ -1,12 +1,20 @@
+//!: BLogの型定義　blog/[id]page,blogpage
+
 import { MicroCMSListResponse } from "microcms-js-sdk";
 
-export type BlogProps = {
+export type BlogItemProps = {
 	title: string;
-	subtitle?: string;
-	content: string;
+	subtitle: string;
+	id: string;
 };
 
-export type MicroCMSBlogProps = MicroCMSListResponse<BlogProps>;
+export type BlogProps = MicroCMSListResponse<BlogItemProps>;
+
+export type BlogPageProps = {
+	title: string;
+	content: string;
+	createAt: string;
+};
 
 export type PortfolioProps = {
 	id: number;

@@ -2,10 +2,10 @@ import { Box, Container, Group, Text } from "@mantine/core";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Layout } from "src/components/Layout";
-import { BlogProps } from "src/types";
 import { client } from "src/lib/client";
+import { BlogPageProps } from "src/types";
 
-type Props = BlogProps & MicroCMSContentId & MicroCMSDate;
+type Props = BlogPageProps & MicroCMSContentId & MicroCMSDate;
 
 export const BlogID: NextPage<Props> = (props) => {
 	return (
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async (
 			notFound: true,
 		};
 	}
-	const data = await client.getListDetail<BlogProps>({
+	const data = await client.getListDetail<BlogPageProps>({
 		endpoint: "blogs",
 		contentId: ctx.params.id,
 	});
