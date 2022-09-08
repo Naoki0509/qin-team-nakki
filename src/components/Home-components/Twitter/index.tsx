@@ -9,7 +9,10 @@ export const Twitter: FC = () => {
 			<Text pb={20} mb={40} size={26} weight={700} className="border-b">
 				Twitter
 			</Text>
-			<p>Twitter</p>
+			<a href="https://twitter.com/naoki__0509?ref_src=twsrc%5Etfw">
+				Tweets by naoki__0509
+			</a>{" "}
+			<script async src="https://platform.twitter.com/widgets.js"></script>
 		</Box>
 	);
 };

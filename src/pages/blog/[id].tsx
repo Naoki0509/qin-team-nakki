@@ -3,11 +3,12 @@ import dayjs from "dayjs";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Layout } from "src/components/Layout";
-import { MicroClient } from "src/lib/client";
+
 import { BlogPageProps } from "src/types";
 import { TypographyStylesProvider } from "@mantine/core";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
+import { MicroClient } from "src/lib/client";
 
 type Props = BlogPageProps & MicroCMSContentId & MicroCMSDate;
 
