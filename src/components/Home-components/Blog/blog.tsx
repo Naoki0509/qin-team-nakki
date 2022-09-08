@@ -21,7 +21,7 @@ export const Blog: FC<BlogProps> = (props) => {
 				<Grid>
 					{filteredBlogdata.map((content) => {
 						return (
-							<Link href={`/blog/${content.id}`}>
+							<Link href={`/blog/${content.id}`} key={content.id}>
 								<Grid.Col>
 									<BlogContents
 										title={content.title}

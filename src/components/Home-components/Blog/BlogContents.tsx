@@ -5,10 +5,7 @@ import { BlogItemProps } from "src/types";
 export const BlogContents: FC<BlogItemProps> = (props) => {
 	return (
 		<div>
-			<Card
-				key={props.id}
-				className="shadow-lg border border-gray-100 border-solid"
-			>
+			<Card className="shadow-lg border border-gray-100 border-solid">
 				<Text className="font-bold">{props.title}</Text>
 				<Text>{props.subtitle}</Text>
 			</Card>
