@@ -6,9 +6,9 @@ import { Github } from "src/components/Home-components/Github";
 import { Portfolio } from "src/components/Home-components/portfolio";
 import { Twitter } from "src/components/Home-components/Twitter";
 import { Layout } from "src/components/Layout";
-import { client } from "src/lib/client";
+import { MicroClient } from "src/lib/client";
 import { useMediaQuery } from "src/lib/mantine";
-import { BlogItemProps } from "src/types";
+import { BlogItemProps, BlogProps } from "src/types";
 
 type Props = {
 	blogdata: MicroCMSListResponse<BlogItemProps>;
@@ -35,7 +35,7 @@ const Home: NextPage<Props> = ({ blogdata }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-	const blogdata = await client.getList<BlogItemProps>({
+	const blogdata = await MicroClient.getList<BlogItemProps>({
 		endpoint: "blogs",
 		queries: { limit: 5 },
 	});

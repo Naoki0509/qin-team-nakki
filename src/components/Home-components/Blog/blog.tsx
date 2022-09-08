@@ -10,7 +10,7 @@ import { BlogProps } from "src/types";
 export const Blog: FC<BlogProps> = (props) => {
 	const router = useRouter();
 	const home = router.asPath === "/";
-	const response = useMediaQuery("sm", false);
+	const response = useMediaQuery("sm");
 
 	const numberToDhowBlogs = home ? (response ? 4 : 5) : props.contents.length;
 	const filteredBlogdata = props.contents.slice(0, numberToDhowBlogs);
