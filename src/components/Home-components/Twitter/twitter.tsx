@@ -1,5 +1,7 @@
 import {
 	Avatar,
+	Box,
+	Card,
 	Grid,
 	Group,
 	Stack,
@@ -23,32 +25,33 @@ export const Twitter: FC<Props> = ({ twitterUser, tweets }) => {
 				<Title>Twitter</Title>
 				{tweets.map((tweet) => {
 					return (
-						<Grid
-							key={tweet.id}
-							justify={"space-between"}
-							align={"flex-start"}
-							columns={24}
-						>
-							<Grid.Col>
-								<Avatar
-									src={twitterUser.profile_image_url}
-									radius={"xl"}
-									size={38}
-								/>
-							</Grid.Col>
-							<Grid.Col span={21}>
-								<Group>
-									<Text>{twitterUser.name}</Text>
-									<Text>
-										@{twitterUser.username}{" "}
-										{dayjs(tweet.created_at).format("MM月DD日")}
+						<Card key={tweet.id}>
+							<Group className="flex flex-row">
+								<Box>
+									<Avatar
+										src={twitterUser.profile_image_url}
+										className="rounded-full"
+										size={38}
+									/>
+								</Box>
+								<Box>
+									<Text className="font-bold text-[16px] text-black-200">
+										{twitterUser.name}
 									</Text>
-								</Group>
-								<TypographyStylesProvider>
-									<div dangerouslySetInnerHTML={{ __html: tweet.text }} />
-								</TypographyStylesProvider>
-							</Grid.Col>
-						</Grid>
+									<Text>
+										@{twitterUser.username}・
+										{dayjs(tweet.created_at).format("M月D日")}
+									</Text>
+								</Box>
+							</Group>
+
+							<TypographyStylesProvider>
+								<pre
+									dangerouslySetInnerHTML={{ __html: tweet.text }}
+									style={{ whiteSpace: "pre-wrap", background: "none" }}
+								/>
+							</TypographyStylesProvider>
+						</Card>
 					);
 				})}
 			</Stack>

@@ -58,7 +58,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	const timeline: TweetUserTimelineV2Paginator =
 		await roTwitterClient.v2.userTimeline(twitterUser.data.id, {
-			"tweet.fields": ["created_at"],
+			"tweet.fields": ["created_at", "attachments"],
+
 			max_results: 5,
 		});
 
