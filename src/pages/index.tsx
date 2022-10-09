@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mantine/core";
+import { Box, Container } from "@mantine/core";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import type { GetStaticProps, NextPage } from "next";
 import { Blog } from "src/components/Home-components/Blog/blog";
@@ -18,6 +18,8 @@ import {
 	UserV2,
 	UserV2Result,
 } from "twitter-api-v2";
+
+import { client } from "src/lib/Github";
 
 type Props = {
 	blogdata: MicroCMSListResponse<BlogItemProps>;
@@ -62,8 +64,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
 			max_results: 5,
 		});
-
-	console.log(timeline.tweets);
 
 	return {
 		props: {

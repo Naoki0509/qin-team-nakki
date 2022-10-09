@@ -1,0 +1,14 @@
+query UserInfo {
+	viewer {
+		login
+		repositories(last: 10) {
+			edges {
+				cursor
+				node {
+					createdAt
+					name
+				}
+			}
+		}
+	}
+}

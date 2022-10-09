@@ -1,0 +1,11 @@
+schema:
+  - https://api.github.com/graphql:
+      headers:
+        "Authorization": "Bearer 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"
+documents: "./src/**/*.graphql" # クエリファイルの指定
+generates:
+  ./src/generated.ts: # 型定義のファイル作成先
+    plugins: # プラグインを指定
+      - typescript
+      - typescript-operations
+      - typed-document-node

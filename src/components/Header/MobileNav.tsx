@@ -26,7 +26,7 @@ export const MobileNav: FC = () => {
 						: theme.colors.gray[2]
 				}
 			>
-				<Group className="m-3 flex flex-col text-3xl">
+				<Group className="m-3 flex text-3xl">
 					<Link href="/about">
 						<Anchor className="text-white" weight={700}>
 							About
